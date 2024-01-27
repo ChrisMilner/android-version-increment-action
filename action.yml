@@ -1,5 +1,8 @@
 name: 'Android Increment Version'
 description: 'Increment your Android version code and version name'
+branding:
+  icon: arrow-up-circle
+  color: orange
 inputs:
   build-gradle-path:
     description: 'Path to your build.gradle file'
