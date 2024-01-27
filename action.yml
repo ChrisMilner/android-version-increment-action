@@ -15,4 +15,4 @@ outputs:
     description: 'The newly incremented version name'
 runs:
   using: 'node20'
-  main: 'index.js'
+  main: 'dist/index.js'
