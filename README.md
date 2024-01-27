@@ -42,7 +42,7 @@ on:
     inputs:
       increment-type:
         type: choice
-        description: Version Code to Release
+        description: Release Type
         options:
           - patch
           - minor
