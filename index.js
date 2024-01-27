@@ -8,11 +8,11 @@ const VERSION_NAME_REGEX = /versionName "([0-9]+).([0-9]+).([0-9]+)"/;
 
 const getNewVersionName = (major, minor, patch, incrementType) => {
     if (incrementType === 'major') {
-        return formatVersion(parseInt(major) + 1, minor, patch);
+        return formatVersion(parseInt(major) + 1, 0, 0);
     }
 
     if (incrementType === 'minor') {
-        return formatVersion(major, parseInt(minor) + 1, patch);
+        return formatVersion(major, parseInt(minor) + 1, 0);
     }
 
     if (incrementType === 'patch') {
