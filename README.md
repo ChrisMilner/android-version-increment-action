@@ -22,8 +22,40 @@ _Defaults to `app/build.gradle`._
 
 The increment type, alters how the `versionName` is updated as described above.
 
-## Example Usage
+## Usage
+
+### Basic
 
 ```yaml
-TODO
+steps:
+  - name: Update version
+    uses: ChrisMilner/android-version-increment-action@1.0.0
+    with:
+        name-increment-type: 'minor'
+```
+
+### Manual Input
+
+```yaml
+on:
+  workflow_dispatch:
+    inputs:
+      increment-type:
+        type: choice
+        description: Version Code to Release
+        options:
+          - patch
+          - minor
+          - major
+        required: true
+
+jobs:
+  release-version:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Update version
+        uses: ChrisMilner/android-version-increment-action@1.0.0
+        with:
+          name-increment-type: ${{ inputs.increment-type }}
 ```
