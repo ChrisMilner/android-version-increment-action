@@ -1,6 +1,6 @@
 # android-version-increment-action
 
-Increments the versionCode and versionName on you Gradle Android projects for you :tada:
+Increments the `versionCode` and `versionName` on you Gradle Android projects for you :tada:
 
 > Note: `versionName` must use [standard semver format](https://semver.org/) e.g. `1.2.3`
 
@@ -20,7 +20,7 @@ _Defaults to `app/build.gradle`._
 
 ### `name-increment-type`
 
-The increment type, alters the `versionName` update as described above.
+The increment type, alters how the `versionName` is updated as described above.
 
 ## Example Usage
 
