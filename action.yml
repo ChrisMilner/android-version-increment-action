@@ -1,0 +1,18 @@
+name: 'Android Increment Version'
+description: 'Increment your Android version code and version name'
+inputs:
+  build-gradle-path:
+    description: 'Path to your build.gradle file'
+    required: false
+    default: 'app/build.gradle'
+  name-increment-type:
+    description: 'Which type of version increment you want: Major|Minor|Patch'
+    required: true
+outputs:
+  new-version-code:
+    description: 'The newly incremented version code'
+  new-version-name:
+    description: 'The newly incremented version name'
+runs:
+  using: 'node20'
+  main: 'index.js'
