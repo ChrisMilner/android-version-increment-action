@@ -4,7 +4,7 @@ const core = require('@actions/core');
 const ALLOWED_INCREMENT_TYPES = ['major', 'minor', 'patch'];
 
 const VERSION_CODE_REGEX = /(versionCode\s*=?\s*)([0-9]+)/;
-const VERSION_NAME_REGEX =  /(versionName\s*=?\s*?)"([0-9]+).([0-9]+).([0-9]+)"/;
+const VERSION_NAME_REGEX = /(versionName\s*=?\s*)"([0-9]+).([0-9]+).([0-9]+)"/;
 
 const getNewVersionName = (major, minor, patch, incrementType) => {
     if (incrementType === 'major') {
