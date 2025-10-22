@@ -29,7 +29,7 @@ The increment type, alters how the `versionName` is updated as described above.
 ```yaml
 steps:
   - name: Update version
-    uses: ChrisMilner/android-version-increment-action@1.0.0
+    uses: ChrisMilner/android-version-increment-action@1.1.0
     with:
         name-increment-type: 'minor'
 ```
@@ -55,7 +55,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Update version
-        uses: ChrisMilner/android-version-increment-action@1.0.0
+        uses: ChrisMilner/android-version-increment-action@1.1.0
         with:
           name-increment-type: ${{ inputs.increment-type }}
 ```
